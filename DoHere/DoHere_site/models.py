@@ -8,27 +8,37 @@ class usuario_tipo(models.Model):
     acesso_nivel = models.SmallIntegerField()
     criacao_data = models.DateField(auto_now_add = True)
     modificacao_data = models.DateField(auto_now = True)
+    def __unicode__(self):
+       return self.tipo
 
 class usuario_status(models.Model):
     status = models.CharField(max_length=50)
     criacao_data = models.DateField(auto_now_add = True)
     modificacao_data = models.DateField(auto_now = True)
+    def __unicode__(self):
+       return self.status
 
 class tecnico_cargo(models.Model):
     cargo = models.CharField(max_length=50)
     criacao_data = models.DateField(auto_now_add = True)
     modificacao_data = models.DateField(auto_now = True)
+    def __unicode__(self):
+       return self.cargo
 
 class curso(models.Model):
     curso = models.CharField(max_length=30)
     criacao_data = models.DateField(auto_now_add = True)
     modificacao_data = models.DateField(auto_now = True)
+    def __unicode__(self):
+       return self.curso
 
 class endereco(models.Model):
     lograd = models.CharField(max_length=30)
     numero = models.CharField(max_length=10)
     criacao_data = models.DateField(auto_now_add = True)
     modificacao_data = models.DateField(auto_now = True)
+    def __unicode__(self):
+       return self.id
 
 class usuario(models.Model):
     nome = models.CharField(max_length=50)

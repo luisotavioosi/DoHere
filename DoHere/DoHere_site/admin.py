@@ -8,7 +8,7 @@ from DoHere_site import models
 class usuarioAdm(admin.ModelAdmin):
 	list_display = ['nome', 'tipo']
 
-
+#Bora Trabaiá!!!!
 
 admin.site.register(models.usuario, usuarioAdm)
 admin.site.register(models.pessoa_comum)
