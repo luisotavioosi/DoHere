@@ -49,7 +49,7 @@ class pessoa_comum(models.Model):
     profissao = models.CharField(max_length=50)
 
 class aluno(models.Model):
-    usuario = models.ForeignKey(usuario, on_delete=models.CASCADE)
+    usuario = models.OneToOneField(usuario, on_delete=models.CASCADE)
     matricula = models.CharField(max_length=7)
     curso = models.ForeignKey(curso, on_delete=models.CASCADE)
 
